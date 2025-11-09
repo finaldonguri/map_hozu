@@ -399,10 +399,10 @@ Cesium.Ion.defaultAccessToken =
 
         // 線Bボタン
         let visibleB = true;
-        const btnB = makeBtn("btn-guideB", "Summary Route:ON");
+        const btnB = makeBtn("btn-guideB", "→:ON");
         const refreshB = () => {
             btnB.classList.toggle("active", visibleB);
-            btnB.textContent = visibleB ? "Summary Route:ON" : "Summary Route:OFF";
+            btnB.textContent = visibleB ? "→:ON" : "→:OFF";
             btnB.style.background = visibleB ? "#2d8cff" : "rgba(255,255,255,.14)";
         };
         refreshB();
