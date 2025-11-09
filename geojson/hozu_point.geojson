@@ -1,0 +1,21 @@
+{
+"type": "FeatureCollection",
+"name": "hozu_point",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "hozu_point": "山本浜" }, "geometry": { "type": "Point", "coordinates": [ 135.606974532796187, 35.014882189208805 ] } },
+{ "type": "Feature", "properties": { "id": 2, "hozu_point": "宮ノ下の瀬" }, "geometry": { "type": "Point", "coordinates": [ 135.608260457427861, 35.015519889727528 ] } },
+{ "type": "Feature", "properties": { "id": 3, "hozu_point": "金岐の瀬" }, "geometry": { "type": "Point", "coordinates": [ 135.613356966059825, 35.02100294277043 ] } },
+{ "type": "Feature", "properties": { "id": 5, "hozu_point": "小鮎の滝" }, "geometry": { "type": "Point", "coordinates": [ 135.616506891533703, 35.022577742902165 ] } },
+{ "type": "Feature", "properties": { "id": 6, "hozu_point": "大高瀬" }, "geometry": { "type": "Point", "coordinates": [ 135.620978134060351, 35.023785391165049 ] } },
+{ "type": "Feature", "properties": { "id": 7, "hozu_point": "殿の漁場" }, "geometry": { "type": "Point", "coordinates": [ 135.622877527323624, 35.018964352769238 ] } },
+{ "type": "Feature", "properties": { "id": 8, "hozu_point": "女渕" }, "geometry": { "type": "Point", "coordinates": [ 135.626652718902847, 35.022973853498335 ] } },
+{ "type": "Feature", "properties": { "id": 9, "hozu_point": "二股の瀬" }, "geometry": { "type": "Point", "coordinates": [ 135.628221782902955, 35.024732174928111 ] } },
+{ "type": "Feature", "properties": { "id": 10, "hozu_point": "曲がり渕" }, "geometry": { "type": "Point", "coordinates": [ 135.631123961429466, 35.024529293616219 ] } },
+{ "type": "Feature", "properties": { "id": 11, "hozu_point": "朝日の瀬" }, "geometry": { "type": "Point", "coordinates": [ 135.630062188797808, 35.017959531415066 ] } },
+{ "type": "Feature", "properties": { "id": 12, "hozu_point": "ビキニの瀬" }, "geometry": { "type": "Point", "coordinates": [ 135.639700724798473, 35.02264537167639 ] } },
+{ "type": "Feature", "properties": { "id": 13, "hozu_point": "保津峡駅上陸地点" }, "geometry": { "type": "Point", "coordinates": [ 135.639759712166892, 35.02358250750359 ] } },
+{ "type": "Feature", "properties": { "id": 15, "hozu_point": "嵐山" }, "geometry": { "type": "Point", "coordinates": [ 135.673842613642989, 35.013157474259287 ] } },
+{ "type": "Feature", "properties": { "id": 17, "hozu_point": "渡月橋" }, "geometry": { "type": "Point", "coordinates": [ 135.677771172380119, 35.012925577038388 ] } }
+]
+}
