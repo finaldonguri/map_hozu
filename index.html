@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>道場テストコース</title>
+
+    <!-- モバイルでの正しいスケール＆ノッチ対応 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!-- Cesium -->
+    <script src="https://unpkg.com/cesium@latest/Build/Cesium/Cesium.js"></script>
+    <link href="https://unpkg.com/cesium@latest/Build/Cesium/Widgets/widgets.css" rel="stylesheet" />
+
+    <link href="style.css" rel="stylesheet" />
+
+    <style>
+        :root {
+            /* ベース倍率（JSから上書きもしやすいようにCSS変数も用意） */
+            --ui-scale: 1;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        #cesiumContainer {
+            position: absolute;
+            inset: 0;
+        }
+
+        .layer-toolbar {
+            position: absolute;
+            top: calc(10px + env(safe-area-inset-top));
+            left: calc(10px + env(safe-area-inset-left));
+            z-index: 10;
+            background: rgba(0, 0, 0, .45);
+            backdrop-filter: blur(6px);
+            border-radius: 12px;
+            padding: 6px;
+            display: flex;
+            gap: 6px;
+        }
+
+        .layer-toolbar button {
+            border: none;
+            padding: calc(8px * var(--ui-scale)) calc(12px * var(--ui-scale));
+            border-radius: 10px;
+            cursor: pointer;
+            color: #fff;
+            background: rgba(255, 255, 255, .14);
+            font-size: calc(14px * var(--ui-scale));
+            line-height: 1;
+            /* タップ領域は44px以上推奨 */
+            min-height: calc(44px * var(--ui-scale));
+            min-width: calc(44px * var(--ui-scale));
+            touch-action: manipulation;
+        }
+
+        .layer-toolbar button.active {
+            background: #2d8cff;
+        }
+
+        /* 画面幅が狭いときはさらに拡大 */
+        @media (max-width: 600px) {
+            :root {
+                --ui-scale: 1.25;
+            }
+        }
+
+        @media (max-width: 380px) {
+            :root {
+                --ui-scale: 1.4;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layer-toolbar">
+        <button id="btn-gsi">地理院</button>
+        <button id="btn-satellite">衛星</button>
+        <!-- （古地図ボタンはJS側で存在チェックしているので必要ならここに追加） -->
+    </div>
+
+    <div id="cesiumContainer"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>
